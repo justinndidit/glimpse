@@ -1,4 +1,4 @@
-module github.com/Adedunmol/go-boilerplate
+module github.com/Adedunmol/glimpse
 
 go 1.26.3
 

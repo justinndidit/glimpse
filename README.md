@@ -1,1 +1,1 @@
-# Go Boilerplate
+# Go glimpse

@@ -3,9 +3,9 @@ package testing
 import (
 	"time"
 
-	"github.com/Adedunmol/go-boilerplate/internal/config"
-	"github.com/Adedunmol/go-boilerplate/internal/database"
-	"github.com/Adedunmol/go-boilerplate/internal/server"
+	"github.com/Adedunmol/glimpse/internal/config"
+	"github.com/Adedunmol/glimpse/internal/database"
+	"github.com/Adedunmol/glimpse/internal/server"
 	"github.com/rs/zerolog"
 )
 

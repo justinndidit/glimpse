@@ -1,7 +1,7 @@
 package router
 
 import (
-	"github.com/Adedunmol/go-boilerplate/internal/handler"
+	"github.com/Adedunmol/glimpse/internal/handler"
 
 	"github.com/labstack/echo/v4"
 )

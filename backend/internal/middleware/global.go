@@ -3,9 +3,9 @@ package middleware
 import (
 	"net/http"
 
-	"github.com/Adedunmol/go-boilerplate/internal/errs"
-	"github.com/Adedunmol/go-boilerplate/internal/server"
-	"github.com/Adedunmol/go-boilerplate/internal/sqlerr"
+	"github.com/Adedunmol/glimpse/internal/errs"
+	"github.com/Adedunmol/glimpse/internal/server"
+	"github.com/Adedunmol/glimpse/internal/sqlerr"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 	"github.com/pkg/errors"

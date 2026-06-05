@@ -5,8 +5,8 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/Adedunmol/go-boilerplate/internal/config"
-	"github.com/Adedunmol/go-boilerplate/internal/lib/email"
+	"github.com/Adedunmol/glimpse/internal/config"
+	"github.com/Adedunmol/glimpse/internal/lib/email"
 	"github.com/hibiken/asynq"
 	"github.com/rs/zerolog"
 )

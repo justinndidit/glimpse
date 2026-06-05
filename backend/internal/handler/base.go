@@ -3,9 +3,9 @@ package handler
 import (
 	"time"
 
-	"github.com/Adedunmol/go-boilerplate/internal/middleware"
-	"github.com/Adedunmol/go-boilerplate/internal/server"
-	"github.com/Adedunmol/go-boilerplate/internal/validation"
+	"github.com/Adedunmol/glimpse/internal/middleware"
+	"github.com/Adedunmol/glimpse/internal/server"
+	"github.com/Adedunmol/glimpse/internal/validation"
 	"github.com/labstack/echo/v4"
 	"github.com/newrelic/go-agent/v3/integrations/nrpkgerrors"
 	"github.com/newrelic/go-agent/v3/newrelic"

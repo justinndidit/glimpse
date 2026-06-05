@@ -3,8 +3,8 @@ package middleware
 import (
 	"context"
 
-	"github.com/Adedunmol/go-boilerplate/internal/logger"
-	"github.com/Adedunmol/go-boilerplate/internal/server"
+	"github.com/Adedunmol/glimpse/internal/logger"
+	"github.com/Adedunmol/glimpse/internal/server"
 	"github.com/labstack/echo/v4"
 	"github.com/newrelic/go-agent/v3/newrelic"
 	"github.com/rs/zerolog"

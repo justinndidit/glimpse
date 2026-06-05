@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/Adedunmol/go-boilerplate/internal/config"
-	"github.com/Adedunmol/go-boilerplate/internal/database"
+	"github.com/Adedunmol/glimpse/internal/config"
+	"github.com/Adedunmol/glimpse/internal/database"
 	"github.com/google/uuid"
 	"github.com/jackc/pgx/v5/pgxpool"
 	"github.com/rs/zerolog"

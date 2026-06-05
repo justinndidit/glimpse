@@ -8,8 +8,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/Adedunmol/go-boilerplate/internal/config"
-	loggerConfig "github.com/Adedunmol/go-boilerplate/internal/logger"
+	"github.com/Adedunmol/glimpse/internal/config"
+	loggerConfig "github.com/Adedunmol/glimpse/internal/logger"
 	pgxzero "github.com/jackc/pgx-zerolog"
 	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgxpool"

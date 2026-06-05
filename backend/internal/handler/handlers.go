@@ -1,8 +1,8 @@
 package handler
 
 import (
-	"github.com/Adedunmol/go-boilerplate/internal/server"
-	"github.com/Adedunmol/go-boilerplate/internal/service"
+	"github.com/Adedunmol/glimpse/internal/server"
+	"github.com/Adedunmol/glimpse/internal/service"
 )
 
 type Handlers struct {

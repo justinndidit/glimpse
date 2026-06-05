@@ -1,7 +1,7 @@
 package middleware
 
 import (
-	"github.com/Adedunmol/go-boilerplate/internal/server"
+	"github.com/Adedunmol/glimpse/internal/server"
 )
 
 type RateLimitMiddleware struct {

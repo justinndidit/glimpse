@@ -5,5 +5,5 @@ func (c *Client) SendWelcomeEmail(to, firstName string) error {
 		"UserFirstName": firstName,
 	}
 
-	return c.SendEmail(to, "Welcome to Boilerplate!", TemplateWelcome, data)
+	return c.SendEmail(to, "Welcome to Glimpse!", TemplateWelcome, data)
 }

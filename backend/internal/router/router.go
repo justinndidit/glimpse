@@ -3,10 +3,10 @@ package router
 import (
 	"net/http"
 
-	"github.com/Adedunmol/go-boilerplate/internal/handler"
-	"github.com/Adedunmol/go-boilerplate/internal/middleware"
-	"github.com/Adedunmol/go-boilerplate/internal/server"
-	"github.com/Adedunmol/go-boilerplate/internal/service"
+	"github.com/Adedunmol/glimpse/internal/handler"
+	"github.com/Adedunmol/glimpse/internal/middleware"
+	"github.com/Adedunmol/glimpse/internal/server"
+	"github.com/Adedunmol/glimpse/internal/service"
 	"github.com/labstack/echo/v4"
 	echoMiddleware "github.com/labstack/echo/v4/middleware"
 	"golang.org/x/time/rate"

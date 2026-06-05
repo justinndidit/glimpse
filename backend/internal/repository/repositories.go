@@ -1,6 +1,6 @@
 package repository
 
-import "github.com/Adedunmol/go-boilerplate/internal/server"
+import "github.com/Adedunmol/glimpse/internal/server"
 
 type Repositories struct{}
 

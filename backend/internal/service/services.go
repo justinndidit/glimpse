@@ -1,9 +1,9 @@
 package service
 
 import (
-	"github.com/Adedunmol/go-boilerplate/internal/lib/job"
-	"github.com/Adedunmol/go-boilerplate/internal/repository"
-	"github.com/Adedunmol/go-boilerplate/internal/server"
+	"github.com/Adedunmol/glimpse/internal/lib/job"
+	"github.com/Adedunmol/glimpse/internal/repository"
+	"github.com/Adedunmol/glimpse/internal/server"
 )
 
 type Services struct {
