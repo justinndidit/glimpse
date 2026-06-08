@@ -2,7 +2,9 @@ version: "3.9"
 
 services:
   app:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
     container_name: glimpse_app
     env_file:
       - .env
@@ -16,6 +18,8 @@ services:
     command: go run ./cmd/glimpse
     volumes:
       - .:/app
+      - go-cache:/root/go/pkg/mod
+      - air-tmp:/app/tmp
     working_dir: /app
 
   postgres:
@@ -50,3 +54,5 @@ services:
 volumes:
   postgres_data:
   redis_data:
+  go-cache:
+  air-tmp:

@@ -60,7 +60,7 @@ tasks:
     desc: Start all services
     cmds:
       - echo 'Starting services for dev...'
-      - docker compose -f docker-compose.dev.yml up -d
+      - docker compose -f docker-compose.dev.yml up --build
 
   docker:down-dev:
     desc: Stop all services
