@@ -13,6 +13,8 @@ services:
         condition: service_healthy
       redis:
         condition: service_started
+      seaweedfs:
+        condition: service_started
     command: go run ./cmd/glimpse
     volumes:
       - .:/app
@@ -47,6 +49,17 @@ services:
       - redis_data:/data
     restart: unless-stopped
 
+  seaweedfs:
+    image: chrislusf/seaweedfs:latest
+    command: server -s3 -dir=/data
+    ports:
+      - "8333:8333" # S3 API
+      - "9333:9333" # SeaweedFS UI/API
+    volumes:
+      - seaweedfs_data:/data
+    restart: unless-stopped
+
 volumes:
   postgres_data:
   redis_data:
+  seaweedfs_data:
