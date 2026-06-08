@@ -21,18 +21,18 @@ services:
   postgres:
     image: postgres:17
     environment:
-      POSTGRES_DB: 'glimpse'
-      POSTGRES_USER: 'postgres'
-      POSTGRES_PASSWORD: 'postgres'
+      POSTGRES_DB: '${DOCKER_DATABASE_NAME}'
+      POSTGRES_USER: '${DOCKER_DATABASE_USER}'
+      POSTGRES_PASSWORD: '${DOCKER_DATABASE_PASSWORD}'
     ports:
-      - "5432:5432"
+      - "${DOCKER_DATABASE_PORT}:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
       test:
         [
           "CMD-SHELL",
-          "pg_isready -U postgres -d glimpse"
+          "pg_isready -U ${DOCKER_DATABASE_USER} -d ${DOCKER_DATABASE_NAME}"
         ]
       interval: 5s
       timeout: 5s
@@ -42,7 +42,7 @@ services:
   redis:
     image: redis:8
     ports:
-      - "6379:6379"
+      - "${DOCKER_REDIS_PORT}:6379"
     volumes:
       - redis_data:/data
     restart: unless-stopped
