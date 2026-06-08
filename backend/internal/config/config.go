@@ -64,8 +64,8 @@ func LoadConfig() (*Config, error) {
 
 	k := koanf.New(".")
 
-	err := k.Load(env.Provider("BOILERPLATE_", ".", func(s string) string {
-		return strings.ToLower(strings.TrimPrefix(s, "BOILERPLATE_"))
+	err := k.Load(env.Provider("GLIMPSE_", ".", func(s string) string {
+		return strings.ToLower(strings.TrimPrefix(s, "GLIMPSE_"))
 	}), nil)
 
 	if err != nil {
@@ -89,7 +89,7 @@ func LoadConfig() (*Config, error) {
 		mainConfig.Observability = DefaultObservabilityConfig()
 	}
 
-	mainConfig.Observability.ServiceName = "boilerplate"
+	mainConfig.Observability.ServiceName = "glimpse"
 	mainConfig.Observability.Environment = mainConfig.Primary.Env
 
 	if err := mainConfig.Observability.Validate(); err != nil {

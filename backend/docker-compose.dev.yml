@@ -32,7 +32,7 @@ services:
       test:
         [
           "CMD-SHELL",
-          "pg_isready -U ${GLIMPSE_DATABASE.USER} -d ${GLIMPSE_DATABASE.NAME}"
+          "pg_isready -U postgres -d glimpse"
         ]
       interval: 5s
       timeout: 5s
