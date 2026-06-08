@@ -59,6 +59,7 @@ func main() {
 	srv.SetupHTTPServer(r)
 
 	ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt)
+	defer stop()
 
 	// Start server
 	go func() {
@@ -70,12 +71,11 @@ func main() {
 	// Wait for interrupt signal to gracefully shutdown the server
 	<-ctx.Done()
 	ctx, cancel := context.WithTimeout(context.Background(), DefaultContextTimeout*time.Second)
+	defer cancel()
 
 	if err = srv.Shutdown(ctx); err != nil {
 		log.Fatal().Err(err).Msg("server forced to shutdown")
 	}
-	stop()
-	cancel()
 
 	log.Info().Msg("server exited properly")
 }
