@@ -42,12 +42,12 @@ func (p *PostgresUserRepository) GetUserEmail(ctx context.Context, email string)
 	})
 
 	if err != nil {
-		return "", fmt.Errorf("failed to execute query to fetch user email")
+		return "", fmt.Errorf("failed to execute query to fetch user email: %w", err)
 	}
 
 	user, err := pgx.CollectOneRow(rows, pgx.RowToStructByName[user.User])
 	if err != nil {
-		return "", fmt.Errorf("failed to collect row from table:users")
+		return "", fmt.Errorf("failed to collect row from table:users: %w", err)
 	}
 
 	return user.Email, nil
@@ -67,12 +67,12 @@ func (p *PostgresUserRepository) GetUserByID(ctx context.Context, userID string)
 	})
 
 	if err != nil {
-		return nil, fmt.Errorf("failed to execute query to fetch user email")
+		return nil, fmt.Errorf("failed to execute query to fetch user email: %w", err)
 	}
 
 	user, err := pgx.CollectOneRow(rows, pgx.RowToStructByName[user.User])
 	if err != nil {
-		return nil, fmt.Errorf("failed to collect row from table:users")
+		return nil, fmt.Errorf("failed to collect row from table:users: %w", err)
 	}
 
 	return &user, nil
@@ -95,12 +95,12 @@ func (p *PostgresUserRepository) CreateUser(ctx context.Context, email, clerkId 
 	})
 
 	if err != nil {
-		return nil, fmt.Errorf("failed to execute create user query")
+		return nil, fmt.Errorf("failed to execute create user query: %w", err)
 	}
 
 	user, err := pgx.CollectOneRow(rows, pgx.RowToStructByName[user.User])
 	if err != nil {
-		return nil, fmt.Errorf("failed too collect row from table:user")
+		return nil, fmt.Errorf("failed too collect row from table:user: %w", err)
 	}
 
 	return &user, nil
